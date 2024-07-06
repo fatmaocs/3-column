@@ -18,16 +18,24 @@
 
 body
 {
-    font-family: "Lexend Deca", sans-serif;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    font-family: "Lexend Deca", sans-serif; 
     font-size: 15px;
     background-color: var(--Very_light_gray);
-    margin: 25vh 25vw;
 }
 
 main
 {
     display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
@@ -49,17 +57,13 @@ main .column:nth-child(3)
 
 main .column  
 {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   align-items: flex-start;
 
    height: 320px;
    width: 200px;
 
    color: var(--Transparent_white);
 
-   padding: 0px 30px ; 
+   padding: 30px 30px ; 
 
 }
 
@@ -73,10 +77,13 @@ main .column h3
 
 main .column p{
     font-size: 12px;
+
+    margin-top: 30px;
+
 }
 
 main img{
-    display: block;
+    margin-bottom: 10px;
 
 }
 
@@ -86,7 +93,7 @@ main .column  .button
     border: 2px solid var(--Transparent_white);
     border-radius: 30px ;
     padding: 5px 15px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
  main .column:nth-child(1) .button
@@ -103,3 +110,25 @@ main .column:nth-child(3) .button
 {
     color: var(--Very_dark_cyan);
 }
+
+@media (max-width: 1000px) 
+{
+    main
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* gap: 20px; */
+    }
+
+    main .column
+    {
+        width: 80%;
+
+    }
+  
+}
+
+
+
+
